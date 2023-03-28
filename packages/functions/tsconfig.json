@@ -4,7 +4,7 @@
     "module": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@configVerification/core/*": ["../core/src/*"]
+      "@sstPdfGen/core/*": ["../core/src/*"]
     }
   }
 }

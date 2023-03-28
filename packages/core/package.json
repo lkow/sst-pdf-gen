@@ -1,5 +1,5 @@
 {
-  "name": "@configVerification/core",
+  "name": "@sstPdfGen/core",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -7,8 +7,14 @@
     "typecheck": "tsc -noEmit"
   },
   "devDependencies": {
-    "vitest": "^0.29.7",
     "@types/node": "^18.15.5",
-    "sst": "^2.2.8"
+    "sst": "^2.2.8",
+    "vitest": "^0.29.7"
+  },
+  "dependencies": {
+    "chrome-aws-lambda": "9.1.0",
+    "nunjucks": "3.2.3",
+    "puppeteer": "9.1.1",
+    "puppeteer-core": "9.1.0"
   }
 }

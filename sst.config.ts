@@ -4,8 +4,8 @@ import { API } from "./stacks/MyStack";
 export default {
   config(_input) {
     return {
-      name: "configVerification",
-      region: "us-east-1",
+      name: "sstPdfGen",
+      region: "eu-central-1",
     };
   },
   stacks(app) {
