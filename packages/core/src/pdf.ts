@@ -28,9 +28,8 @@ export async function generate() {
 
         const page = await browser.newPage();
         const emptyHtml = path.resolve("./templates/empty.html");
-        await page.goto("file://" + emptyHtml);
+        await page.goto("file://" + emptyHtml); // This makes sure the page is initialized (and empty) before we push content to it
         await page.content();
-        await page.setContent(html);
         await page.setContent(html);
         console.log('Content set');
         const fileName = `file.pdf`;
