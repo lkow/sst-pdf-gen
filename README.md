@@ -2,9 +2,10 @@
 This repo presents an example (and a base starting project template) of generating PDF files from HTML templates using:
 * SST (https://sst.dev) for provisioning and deployment
 * AWS Lambda (https://aws.amazon.com/lambda/) for serverless execution
-* Pre-existing AWS Lambda Layer for `chrome-aws-lambda` (https://github.com/alixaxel/chrome-aws-lambda)
-* Nunjucks (https://mozilla.github.io/nunjucks/) for HTML templating
 * Puppeteer (https://pptr.dev) for final PDF generation
+* Creating your own AWS Lambda Layer from `@sparticuz/chromium` release, that should be selected based on Puppeteer version used (https://github.com/Sparticuz/chromium/releases/) - for compatibility read https://pptr.dev/supported-browsers
+* Nunjucks (https://mozilla.github.io/nunjucks/) for HTML templating
+
 
 ## Prerequisites
 * Node.JS v16.16.0+
@@ -19,7 +20,6 @@ This repo presents an example (and a base starting project template) of generati
 * Have fun
 
 ## Important notes
-This example uses a pre-existing AWS Lambda Layer for `chrome-aws-lambda` and Puppeteer version which only work with Node v14 or lower (see note in `stacks/MyStack.ts:10`)
-If you want to use a newer version of Node, you'll need to build your own AWS Lambda Layer for `chrome-aws-lambda` and Puppeteer
-When going this route, you may use https://github.com/Sparticuz/chromium as a starting point for building and deploying your own AWS Lambda Layer
+This example uses a pre-built release of `@sparticuz/chromium` to create a new Lambda Layer on demand.
+If you wish to lower your repo size you may decide to externally deploy the layer and later reference it in your stack.
 Remember to update the `stacks/MyStack.ts:10` to use the new layer, then bump the Puppeteer version accordingly

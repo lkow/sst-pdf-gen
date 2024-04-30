@@ -2,20 +2,18 @@ import path from "path";
 
 export * as PDF from "./pdf";
 
-import chrome from "chrome-aws-lambda";
-import {Browser} from "puppeteer-core";
+import puppeteer, {Browser} from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 import nunjucks from "nunjucks";
-
-const puppeteer = chrome.puppeteer;
 
 export async function generate() {
     let browser: Browser;
 
     try {
         browser = await puppeteer.launch({
-            args: chrome.args,
-            defaultViewport: chrome.defaultViewport,
-            executablePath: await chrome.executablePath,
+            args: chromium.args,
+            defaultViewport: chromium.defaultViewport,
+            executablePath: await chromium.executablePath(),
             headless: true
         });
 

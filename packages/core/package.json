@@ -1,6 +1,6 @@
 {
   "name": "@sstPdfGen/core",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "test": "sst bind vitest",
@@ -12,9 +12,8 @@
     "vitest": "^0.29.7"
   },
   "dependencies": {
-    "chrome-aws-lambda": "9.1.0",
+    "@sparticuz/chromium": "123.0.1",
     "nunjucks": "3.2.3",
-    "puppeteer": "9.1.1",
-    "puppeteer-core": "9.1.0"
+    "puppeteer-core": "22.6.4"
   }
 }

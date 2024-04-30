@@ -1,6 +1,6 @@
 {
   "name": "sst-pdf-gen",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,8 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "sst": "^2.5.2",
-    "aws-cdk-lib": "2.62.2",
+    "sst": "2.41.5",
+    "aws-cdk-lib": "2.132.1",
     "constructs": "10.1.156",
     "typescript": "^5.0.2",
     "@tsconfig/node16": "^1.0.3"

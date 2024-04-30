@@ -1,6 +1,6 @@
 {
   "name": "@sstPdfGen/functions",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "test": "sst bind vitest",
@@ -9,6 +9,6 @@
   "devDependencies": {
     "@types/node": "^18.15.5",
     "@types/aws-lambda": "^8.10.114",
-    "sst": "^2.2.8"
+    "sst": "2.41.5"
   }
 }
